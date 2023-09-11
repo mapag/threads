@@ -18,6 +18,12 @@ This is a clone of the popular social media platform, [Threads](https://www.thre
 3. Run `bun start` to start the Expo server
 4. Scan the QR code with your phone to open the app in Expo
 
+```
+npx expo prebuild -p ios
+
+bun ios
+```
+
 ## Usage
 
 1. Create an account

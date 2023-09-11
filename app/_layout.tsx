@@ -8,6 +8,7 @@ import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import { useColorScheme } from "react-native";
+import { useThreadStore } from "../store/Store";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -48,6 +49,11 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
+  const getThreads = useThreadStore((state: any) => state.fetchThreads);
+
+  useEffect(() => {
+    getThreads();
+  }, [getThreads]);
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
