@@ -10,6 +10,7 @@ This is a clone of the popular social media platform, [Threads](https://www.thre
 - React Native
 - React Navigation
 - Bun
+- Zustand
 
 ## Installation
 
