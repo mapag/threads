@@ -24,6 +24,14 @@ export default function PostLeftSide({
         transition={500}
       />
       <View
+        style={{
+          borderWidth: 1,
+          alignSelf: "center",
+          flexGrow: 1,
+          borderColor: borderColor,
+        }}
+      ></View>
+      <View
         style={{ width: 20, alignItems: "center", alignSelf: "center", gap: 3 }}
       >
         {[1, 2, 3].map((index) => (
@@ -31,7 +39,7 @@ export default function PostLeftSide({
             key={index}
             // @ts-ignore
             source={thread.replies[index - 1]?.author.photo}
-            style={{ width: index * 7, height: index * 7, borderRadius: 15 }}
+            style={{ width: index * 9, height: index * 9, borderRadius: 15 }}
             placeholder={blurHash}
             contentFit="cover"
             transition={500}
